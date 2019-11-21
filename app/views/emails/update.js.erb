@@ -1,3 +1,2 @@
-if (<%=@email.is_read%> === false) {
-	$("#status-"+ <%=@email.id%>).hide()
-}
+$("#status_true-"+ <%=@email.id%>).hide()
+$("#status_false-"+ <%=@email.id%>).show()

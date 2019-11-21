@@ -17,7 +17,9 @@
 				  			<div style="padding-top: 5px;" id="email-<%=email.id%>">
 					    		<%=email.object%> | <a href="<%=email_path(email)%>" data-remote="true">Contenue du mail</a>
 					    		<%if email.is_read == false%>
-					    			<div id="status-<%=email.id%>">Status : Email non-lu</div>
+					    			<div id="status_false-<%=email.id%>">Status : email non-lu</div>
+					    		<%elsif email.is_read == true%>
+					    			<div id="status_true-<%=email.id%>">Status : email lu</div>
 					    		<%end%>
 					    	</div>
 					<%end%>
