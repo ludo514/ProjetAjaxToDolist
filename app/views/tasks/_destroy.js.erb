@@ -1,0 +1,6 @@
+$(document).ready(function() {
+// Mets ici ton code
+	$('#task-' + <%=task.id%>).remove();
+	console.log($('#task-' + <%=task.id%>))
+});
+//document.getElementById("<%=@category.title%>").insertAdjacentHTML("beforeend", "<%= j render 'task', task: @task %>")

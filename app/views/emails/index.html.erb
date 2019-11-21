@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+	<body>
+		<a href='<%=emails_path%>' data-method="POST" data-remote="true" class="btn btn-primary">Recevoir Email</a>
+		<div class="container row">
+			<div class="col-6 card" style="margin-left: 10px;">
+				<div class="card-header">
+    				Object
+  				</div>
+  				<div id="object">
+				  	<%@email.each do |email|%>
+					    <div style="padding-top: 5px;">
+					    	<%=email.object%> | <a href="<%=email_path(email)%>" data-remote="true">Contenue du mail</a></br>
+					    </div>
+					<%end%>
+				</div>
+			</div>
+			<div class="col" id="object_content">
+				<div class="card-header">
+					Contenue
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+

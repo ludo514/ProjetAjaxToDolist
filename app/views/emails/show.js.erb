@@ -1,0 +1,7 @@
+
+if (document.getElementById("email") === null) {
+	document.getElementById("object_content").insertAdjacentHTML("beforeend", "<%= j render 'body', task: @email %>")
+}
+else{
+	document.getElementById("email").remove()
+}
