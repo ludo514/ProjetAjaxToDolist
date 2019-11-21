@@ -1,5 +1,5 @@
 
-<div class="container text-center" id="email" style="width: ">
+<div class="container text-center" id="email">
 	<div class="card">
 	  <div class="card-header">
 	    Object : <%=@email.object%>
@@ -10,7 +10,7 @@
 	      <%=@email.body%>
 	    </blockquote>
 	    <a href=''data-remote="true" class="btn btn-success">Marquer comme non-lu</a>
-	    <a href=''data-remote="true" class="btn btn-danger">Supprimer</a>
+	    <%=link_to 'Supprimer', email_path(), method: :delete, class:'btn btn-danger',remote: true%>
 	  </div>
 	</div>
 </div>

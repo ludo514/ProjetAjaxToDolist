@@ -12,9 +12,9 @@
   				</div>
   				<div id="object">
 				  	<%@email.each do |email|%>
-					    <div style="padding-top: 5px;">
-					    	<%=email.object%> | <a href="<%=email_path(email)%>" data-remote="true">Contenue du mail</a></br>
-					    </div>
+				  			<div style="padding-top: 5px;" id="email-<%email%>">
+					    		<%=email.object%> | <a href="<%=email_path(email)%>" data-remote="true">Contenue du mail</a></br>
+					    	</div>
 					<%end%>
 				</div>
 			</div>
