@@ -13,7 +13,14 @@
   				<div id="object">
 				  	<%@email.each do |email|%>
 				  			<div style="padding-top: 5px;" id="email-<%email%>">
-					    		<%=email.object%> | <a href="<%=email_path(email)%>" data-remote="true">Contenue du mail</a></br>
+					    		<%=email.object%> | <a href="<%=email_path(email)%>" data-remote="true">Contenue du mail</a> 
+					    		<% if email.is_read == false%>
+					    			Status : Email non-lu</br>
+					    		<%elsif email.is_read == true%>
+					    			Status : Email lu</br>
+					    		<%else%>
+					    			Status : aucun status</br>
+					    		<%end%>
 					    	</div>
 					<%end%>
 				</div>
