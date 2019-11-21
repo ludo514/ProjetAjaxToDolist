@@ -1,4 +1,3 @@
-
 <div class="container text-center" id="email">
 	<div class="card">
 	  <div class="card-header">
@@ -9,8 +8,8 @@
 	    <blockquote class="blockquote mb-0">
 	      <%=@email.body%>
 	    </blockquote>
-	   	<%=link_to 'Marquer comme non-lu', email_path(), method: :patch, class:'btn btn-danger',remote: true, class:'btn btn-success'%>
 	    <%=link_to 'Supprimer', email_path(), method: :delete, class:'btn btn-danger',remote: true%>
+	    <a href="<%=email_path()%>" class="btn btn-success" data-remote="true" data-method="PATCH">Marquer comme non-lu</a>
 	  </div>
 	</div>
 </div>

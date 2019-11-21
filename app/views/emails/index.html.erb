@@ -4,22 +4,20 @@
 	<title></title>
 </head>
 	<body>
-		<a href='<%=emails_path%>' data-method="POST" data-remote="true" class="btn btn-primary">Recevoir Email</a>
-		<div class="container row">
+		<div class="text-center mb-3">
+			<a href='<%=emails_path%>' data-method="POST" data-remote="true" class="btn btn-primary">Recevoir Email</a>
+		</div>
+		<div class="container row mx-auto">
 			<div class="col-6 card" style="margin-left: 10px;">
 				<div class="card-header">
     				Object
   				</div>
   				<div id="object">
 				  	<%@email.each do |email|%>
-				  			<div style="padding-top: 5px;" id="email-<%email%>">
-					    		<%=email.object%> | <a href="<%=email_path(email)%>" data-remote="true">Contenue du mail</a> 
-					    		<% if email.is_read == false%>
-					    			Status : Email non-lu</br>
-					    		<%elsif email.is_read == true%>
-					    			Status : Email lu</br>
-					    		<%else%>
-					    			Status : aucun status</br>
+				  			<div style="padding-top: 5px;" id="email-<%=email.id%>">
+					    		<%=email.object%> | <a href="<%=email_path(email)%>" data-remote="true">Contenue du mail</a>
+					    		<%if email.is_read == false%>
+					    			<div id="status-<%=email.id%>">Status : Email non-lu</div>
 					    		<%end%>
 					    	</div>
 					<%end%>

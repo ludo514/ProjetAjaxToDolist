@@ -8,7 +8,7 @@ class EmailsController < ApplicationController
     @email.update(is_read:true)
     respond_to do |format|
         format.html { redirect_to root_path }
-        format.js {}
+        format.js { }
     end
   end
 

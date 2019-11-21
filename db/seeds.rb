@@ -22,5 +22,5 @@ Task.destroy_all
 end
 
 10.times do
-	Email.create(object:Faker::Book.title, body:"jioddziohziofhiozqhfoisqjon ckqnznzqfionq zfkqnofifnqoz fop,pofza")
+	Email.create(object:Faker::Book.title, body:"jioddziohziofhiozqhfoisqjon ckqnznzqfionq zfkqnofifnqoz fop,pofza", is_read: false)
 end
